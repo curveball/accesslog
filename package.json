@@ -1,7 +1,7 @@
 {
-  "name": "@curveball/new-package",
+  "name": "@curveball/accesslog",
   "version": "0.0.1",
-  "description": "Description goes here",
+  "description": "Log HTTP requests and responses to STDOUT",
   "main": "dist/index.js",
   "scripts": {
     "prepublishOnly": "make build",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/curveball/new-package.git"
+    "url": "git+https://github.com/curveball/accesslog.git"
   },
   "files": [
     "package.json",
@@ -26,14 +26,15 @@
     "typescript",
     "push",
     "http2",
-    "curveball"
+    "curveball",
+    "accesslog"
   ],
   "author": "Evert Pot (https://evertpot.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/curveball/new-package/issues"
+    "url": "https://github.com/curveball/accesslog/issues"
   },
-  "homepage": "https://github.com/curveball/new-package#readme",
+  "homepage": "https://github.com/curveball/accesslog#readme",
   "devDependencies": {
     "@curveball/core": "^0.10.0",
     "@types/chai": "^4.2.7",
