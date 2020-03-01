@@ -57,5 +57,8 @@
   },
   "peerDependencies": {
     "@curveball/core": ">=0.9 <1"
+  },
+  "dependencies": {
+    "chalk": "^3.0.0"
   }
 }
