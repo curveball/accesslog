@@ -39,10 +39,24 @@ import accessLog from '@curveball/accesslog';
 import { Application } from '@curveball/core';
 
 const app = new Application();
-app.use(accessLog([
-  '/ignore'
-]));
+app.use(accessLog({
+  blacklist: ['/ignore']
+}));
 ```
 
+### Disabling ANSI colors
+
+If you don't want any color output, it can be disabled entirely with the
+`disableColor` option:
+
+```typescript
+import accessLog from '@curveball/accesslog';
+import { Application } from '@curveball/core';
+
+const app = new Application();
+app.use(accessLog({
+  disableColor: true
+}));
+```
 
 [1]: https://github.com/curveball/
