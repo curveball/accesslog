@@ -4,6 +4,7 @@ Curveball Access Log
 This package is a middleware for [Curveball][1] that will automatically log
 HTTP requests and responses to the console.
 
+![Screenshot from 0.2.0](https://github.com/curveball/accesslog/blob/master/screenshots/v0.2.0.png)
 
 Installation
 ------------
