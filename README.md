@@ -25,10 +25,10 @@ app.use(accessLog());
 
 ### Blacklisting urls
 
-If you'd like to remove certain urls from the access log, you can specify a
-whitelist.
+If you'd like to remove certain urls from the access log, you can filter
+them out with the 'blacklist' setting.
 
-The default whitelist contains one url: `/health`, as this is often an
+The default blacklist contains one url: `/health`, as this is often an
 endpoint used by load balancers and container orchestrators to see if the
 service is alive.
 
