@@ -1,11 +1,11 @@
 Changelog
 =========
 
-0.2.1 (?)
----------
+0.2.1 (2021-02-18)
+------------------
 
-* Typescript target is now `es2019` instead of `esnext` to ensure that older
-  Node.js versions are supported.
+* Upgrade everything to the latest curveball standards.
+* Publish to github packages.
 
 
 0.2.0 (2020-03-02)
