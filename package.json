@@ -63,7 +63,7 @@
   },
   "dependencies": {
     "chalk": "^4.1.0"
-  }
+  },
   "mocha": {
     "require": "ts-node/register",
     "recursive": true,
