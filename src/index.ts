@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import { Context, Middleware } from '@curveball/core';
-import chalk from 'chalk';
+import * as chalk from 'chalk';
 
 type AccessLogOptions = {
 
