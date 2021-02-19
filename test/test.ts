@@ -1,6 +1,8 @@
+/* eslint-disable no-console */
 import { Application } from '@curveball/core';
 import accessLog from '../src/index';
 import { expect } from 'chai';
+
 
 describe('accesslog - no color', () => {
 
@@ -8,7 +10,7 @@ describe('accesslog - no color', () => {
   let oldConsole:any;
   let out: any[] = [];
 
-  beforeEach( () => { 
+  beforeEach( () => {
 
     oldConsole = console.log;
     console.log = (...parts:any) => out.push(parts);
@@ -70,11 +72,10 @@ describe('accesslog - no color', () => {
 });
 describe('accesslog - color', () => {
 
-
   let oldConsole:any;
   let out: any[] = [];
 
-  beforeEach( () => { 
+  beforeEach( () => {
 
     oldConsole = console.log;
     console.log = (...parts:any) => out.push(parts);

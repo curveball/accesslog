@@ -1,11 +1,12 @@
-// tslint:disable no-console
+/* eslint-disable no-console */
 import { Context, Middleware } from '@curveball/core';
-import chalk from 'chalk';
+import * as chalk from 'chalk';
 
 type AccessLogOptions = {
 
   blacklist?: string[]
   disableColor?: boolean;
+  forceColor?: boolean;
 
 };
 
