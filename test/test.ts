@@ -3,6 +3,7 @@ import { Application } from '@curveball/core';
 import accessLog from '../src/index';
 import { expect } from 'chai';
 
+
 describe('accesslog - no color', () => {
 
 
@@ -71,6 +72,7 @@ describe('accesslog - no color', () => {
 });
 describe('accesslog - color', () => {
 
+  process.env.FORCE_COLOR='1'
 
   let oldConsole:any;
   let out: any[] = [];
