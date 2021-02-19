@@ -8,7 +8,7 @@ describe('accesslog - no color', () => {
   let oldConsole:any;
   let out: any[] = [];
 
-  beforeEach( () => { 
+  beforeEach( () => {
 
     oldConsole = console.log;
     console.log = (...parts:any) => out.push(parts);
@@ -74,7 +74,7 @@ describe('accesslog - color', () => {
   let oldConsole:any;
   let out: any[] = [];
 
-  beforeEach( () => { 
+  beforeEach( () => {
 
     oldConsole = console.log;
     console.log = (...parts:any) => out.push(parts);
