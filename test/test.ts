@@ -72,8 +72,6 @@ describe('accesslog - no color', () => {
 });
 describe('accesslog - color', () => {
 
-  process.env.FORCE_COLOR='1';
-
   let oldConsole:any;
   let out: any[] = [];
 
@@ -95,7 +93,9 @@ describe('accesslog - color', () => {
   it('should log HTTP requests and responses', async () => {
 
     const app = new Application();
-    app.use(accessLog());
+    app.use(accessLog({
+      forceColor: true,
+    }));
 
     app.use( ctx => {
 

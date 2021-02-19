@@ -6,6 +6,7 @@ type AccessLogOptions = {
 
   blacklist?: string[]
   disableColor?: boolean;
+  forceColor?: boolean;
 
 };
 
@@ -17,6 +18,7 @@ export default function accessLog(arg?: string[]|AccessLogOptions): Middleware {
   let blacklist: Set<string>;
 
   let disableColor = false;
+  let forceColor = false;
 
   if (arg === undefined) {
     blacklist = new Set(['/health']);
@@ -33,6 +35,10 @@ export default function accessLog(arg?: string[]|AccessLogOptions): Middleware {
       disableColor = true;
     }
 
+    if (arg.forceColor) {
+      forceColor = true;
+    }
+
   }
 
 
@@ -45,7 +51,7 @@ export default function accessLog(arg?: string[]|AccessLogOptions): Middleware {
     counter++;
     const reqNumber = counter;
 
-    if (!disableColor && chalk.supportsColor) {
+    if (forceColor || (!disableColor && chalk.supportsColor)) {
       return colorLog(reqNumber, ctx, next);
     } else {
       return monoLog(reqNumber, ctx, next);
