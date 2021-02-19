@@ -72,7 +72,7 @@ describe('accesslog - no color', () => {
 });
 describe('accesslog - color', () => {
 
-  process.env.FORCE_COLOR='1'
+  process.env.FORCE_COLOR='1';
 
   let oldConsole:any;
   let out: any[] = [];
