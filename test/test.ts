@@ -92,6 +92,7 @@ describe('accesslog - color', () => {
 
   it('should log HTTP requests and responses', async () => {
 
+    process.env.FORCE_COLOR='1';
     const app = new Application();
     app.use(accessLog({
       forceColor: true,
