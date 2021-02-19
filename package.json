@@ -1,6 +1,6 @@
 {
   "name": "@curveball/accesslog",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Log HTTP requests and responses to STDOUT",
   "main": "dist/index.js",
   "scripts": {
