@@ -4,7 +4,7 @@ import * as chalk from 'chalk';
 
 type AccessLogOptions = {
 
-  blacklist?: string[]
+  blacklist?: string[];
   disableColor?: boolean;
   forceColor?: boolean;
 
