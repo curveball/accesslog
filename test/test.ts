@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { Application } from '@curveball/core';
+import { Application } from '@curveball/kernel';
 import accessLog from '../src/index';
 import { expect } from 'chai';
 
