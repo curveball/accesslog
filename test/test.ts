@@ -77,6 +77,7 @@ describe('accesslog - color', () => {
 
   beforeEach( () => {
 
+    process.env.FORCE_COLOR='1';
     oldConsole = console.log;
     console.log = (...parts:any) => out.push(parts);
     out = [];
@@ -87,6 +88,7 @@ describe('accesslog - color', () => {
 
     console.log = oldConsole;
     out = [];
+    delete process.env.FORCE_COLOR;
 
   });
 
