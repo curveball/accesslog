@@ -8,7 +8,7 @@ build: dist/build
 
 .PHONY:test
 test:
-	FORCE_COLOR=1 node_modules/.bin/nyc node_modules/.bin/mocha
+	node_modules/.bin/nyc node_modules/.bin/mocha
 
 .PHONY:lint
 lint:
