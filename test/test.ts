@@ -92,7 +92,7 @@ describe('accesslog - color', () => {
 
   });
 
-  it('should log HTTP requests and responses', async () => {
+  it.skip('should log HTTP requests and responses', async () => {
 
     const app = new Application();
     app.use(accessLog());
