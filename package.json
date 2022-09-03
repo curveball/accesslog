@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/curveball/accesslog#readme",
   "devDependencies": {
-    "@curveball/core": "^0.16.2",
+    "@curveball/kernel": ">=0.20 <1",
     "@types/chai": "^4.2.15",
     "@types/mocha": "^8.2.1",
     "@types/node": "^12.20.12",
@@ -58,9 +58,6 @@
       ".ts"
     ]
   },
-  "peerDependencies": {
-    "@curveball/core": ">=0.16 <1"
-  },
   "dependencies": {
     "chalk": "^4.1.0"
   },
@@ -72,5 +69,8 @@
       "js",
       "tsx"
     ]
+  },
+  "peerDependencies": {
+    "@curveball/kernel": "^0.20.0"
   }
 }
