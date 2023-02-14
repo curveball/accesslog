@@ -61,7 +61,7 @@ async function monoLog(reqNumber: number, ctx: Context, next: () => Promise<void
   console.info('=> (%i) %s %s', reqNumber, ctx.request.method, ctx.request.path);
   await next();
   const endTime = new Date().getTime();
-  console.log('<= (%i) %s %s', reqNumber, ctx.response.status, (endTime - startTime) + 'ms');
+  console.info('<= (%i) %s %s', reqNumber, ctx.response.status, (endTime - startTime) + 'ms');
 
 }
 
@@ -90,7 +90,7 @@ async function colorLog(reqNumber: number, ctx: Context, next: () => Promise<voi
   }
 
   const startTime = new Date().getTime();
-  console.log('=> (%i) %s %s', reqNumber, method, ctx.request.path);
+  console.info('=> (%i) %s %s', reqNumber, method, ctx.request.path);
   await next();
   const endTime = new Date().getTime();
 
@@ -129,6 +129,6 @@ async function colorLog(reqNumber: number, ctx: Context, next: () => Promise<voi
     strTime = chalk.redBright(time, 'ms');
   }
 
-  console.log('<= (%i) %s %s', reqNumber, status, strTime);
+  console.info('<= (%i) %s %s', reqNumber, status, strTime);
 
 }
