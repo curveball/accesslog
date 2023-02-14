@@ -1,6 +1,5 @@
-/* eslint-disable no-console */
 import { Application } from '@curveball/kernel';
-import accessLog from '../src/index';
+import accessLog from '../src/index.js';
 import { expect } from 'chai';
 
 
@@ -12,15 +11,15 @@ describe('accesslog - no color', () => {
 
   beforeEach( () => {
 
-    oldConsole = console.log;
-    console.log = (...parts:any) => out.push(parts);
+    oldConsole = console.info;
+    console.info = (...parts:any) => out.push(parts);
     out = [];
 
   });
 
   afterEach( () => {
 
-    console.log = oldConsole;
+    console.info = oldConsole;
     out = [];
 
   });
@@ -78,15 +77,15 @@ describe('accesslog - color', () => {
   beforeEach( () => {
 
     process.env.FORCE_COLOR='1';
-    oldConsole = console.log;
-    console.log = (...parts:any) => out.push(parts);
+    oldConsole = console.info;
+    console.info = (...parts:any) => out.push(parts);
     out = [];
 
   });
 
   afterEach( () => {
 
-    console.log = oldConsole;
+    console.info = oldConsole;
     out = [];
     delete process.env.FORCE_COLOR;
 
