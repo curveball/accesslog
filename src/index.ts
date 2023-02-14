@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { Context, Middleware } from '@curveball/kernel';
 import * as chalk from 'chalk';
 
@@ -59,7 +58,7 @@ async function monoLog(reqNumber: number, ctx: Context, next: () => Promise<void
 
   const startTime = new Date().getTime();
 
-  console.log('=> (%i) %s %s', reqNumber, ctx.request.method, ctx.request.path);
+  console.info('=> (%i) %s %s', reqNumber, ctx.request.method, ctx.request.path);
   await next();
   const endTime = new Date().getTime();
   console.log('<= (%i) %s %s', reqNumber, ctx.response.status, (endTime - startTime) + 'ms');
