@@ -6,6 +6,7 @@ Changelog
 
 * This package now supports ESM and CommonJS modules.
 * No longer supports Node 14. Please use Node 16 or higher.
+* Now using console.info instead of console.log
 
 
 0.3.0 (2022-09-03)
